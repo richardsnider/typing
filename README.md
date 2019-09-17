@@ -1,1 +1,1 @@
-# typing
+# webpack-example
