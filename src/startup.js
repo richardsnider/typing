@@ -2,10 +2,13 @@ const elemancer = require('./utilities/elemancer');
 const rawData = require('./data/commonNouns');
 const _ = require('lodash');
 const styles = require('./styling/baseStyle');
-const global = require('./styling/globals');
+const globalStyles = require('./styling/globals');
 
 module.exports = () => {
     console.log(`Initializing document ...`);
+
+    globalStyles.initializeGlobalStyles();
+    elemancer.initializeExtensionMethods();
 
     let body = document.body;
     let word = body.appendElement({ attributes: { id: `word` } });

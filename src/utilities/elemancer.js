@@ -18,9 +18,11 @@ const elemancer = {
     table: (params) => elemancer.createElementWithTag(`table`, params),
 }
 
-HTMLElement.prototype.appendElement = function (params) { return this.appendChild(elemancer.element(params)) };
-HTMLElement.prototype.appendH1 = function (params) { return this.appendChild(elemancer.h1(params)) };
-HTMLElement.prototype.appendInput = function (params) { return this.appendChild(elemancer.input(params)) };
-HTMLElement.prototype.appendTable = function (params) { return this.appendChild(elemancer.table(params)) };
-
-module.exports = elemancer;
+module.exports = {
+    initializeExtensionMethods: () => {
+        HTMLElement.prototype.appendElement = function (params) { return this.appendChild(elemancer.element(params)) };
+        HTMLElement.prototype.appendH1 = function (params) { return this.appendChild(elemancer.h1(params)) };
+        HTMLElement.prototype.appendInput = function (params) { return this.appendChild(elemancer.input(params)) };
+        HTMLElement.prototype.appendTable = function (params) { return this.appendChild(elemancer.table(params)) };
+    }
+};
