@@ -13,7 +13,7 @@
   "private": false,
   "dependencies": {
     "aphrodite": "^2.4.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "webpack": "^4.17.1"
   },
   "devDependencies": {
